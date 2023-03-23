@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:wght@800&family=Source+Code+Pro:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  margin: 0px;
+  color: azure;
+  background-color: blue;
+}
+
+header {
+  background-color: #000;
+}
+
+.header {
+  animation: my-animation;
+}
+
+@keyframes my-animation {
+  0% {
+    background-color: rgb(238, 11, 181);
+  }
+  20% {
+    background-color: #000;
+  }
+  40% {
+    background-color: rgb(238, 11, 181);
+  }
+  60% {
+    background-color: #000;
+  }
+  80% {
+    background-color: rgb(238, 11, 181);
+  }
+  100% {
+    background-color: #000;
+  }
+}
+
+.header.play {
+  animation-duration: 6s;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 40px 0px 5px 20px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.between {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  margin: 5px 0px 5px 20px;
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  border-radius: 15px;
+  font-size: 6rem;
+  padding: 3rem 3rem;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.question-blink {
+  animation: question-blink 5s linear infinite;
+}
+
+@keyframes question-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.num_span {
+  font-size: 3.5rem;
+}
+
+.message {
+  text-align: center;
+  height: 3rem;
+  margin: 35px 0 35px 0;
+}
+
+.btn {
+  width: 70%;
+}
+
+.guess {
+  background-color: #fff;
+  border: 4px solid #eee;
+  border-radius: 25px;
+  font-size: 3rem;
+  height: 20vh;
+  width: 70%;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.label-score {
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.label-highscore {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.notes {
+  margin-top: 30px;
+}
+
+.again {
+  font-family: 'VT323', monospace;
+  margin-bottom: 20px;
+}
+
+.loader {
+  margin-left: 5px;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  display: inline-block;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: blink 1s infinite;
+}
+
+.loader::after {
+  animation-delay: 0.2s;
+}
+
+.loader::before {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
