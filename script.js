@@ -12,6 +12,8 @@ const displayMessage = function (message) {
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
+  document.querySelector('.guess').value = '';
+  document.querySelector('.guess').focus();
 
   // no input
   if (!guess) {
@@ -31,8 +33,8 @@ document.querySelector('.check').addEventListener('click', function () {
     if (score > 1) {
       displayMessage(
         guess > secretNumber
-          ? 'It is greater than my chosen number!'
-          : 'It is less than my chosen number!'
+          ? `${guess} is greater than my chosen number!`
+          : `${guess} is less than my chosen number!`
       );
       score--;
       document.querySelector('.score').textContent = score;
