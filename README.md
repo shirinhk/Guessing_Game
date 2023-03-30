@@ -1,5 +1,5 @@
 # Guessing_Game
-##JavaScript Game
+## JavaScript Game
 
 
 ### 1. Using JavaScript to complete the Project.
